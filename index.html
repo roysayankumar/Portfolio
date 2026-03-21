@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shanto Roy | MERN Stack Developer</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" href="./assets/favicon/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="./assets/favicon/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <!-- <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        float: "float 3s ease-in-out infinite",
+                        fade: "fade 1s ease-out forwards",
+                    },
+                    keyframes: {
+                        float: { "0%,100%": { transform: "translateY(0)" }, "50%": { transform: "translateY(-12px)" } },
+                        fade: { "0%": { opacity: 0, transform: "translateY(20px)" }, "100%": { opacity: 1, transform: "translateY(0)" } }
+                    }
+                }
+            }
+        };
+    </script> -->
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        float: "float 3s ease-in-out infinite",
+                        fade: "fade 1s ease-out forwards",
+                        "slide-left": "slideLeft 1s ease-out forwards",
+                        "slide-right": "slideRight 1s ease-out forwards"
+                    },
+                    keyframes: {
+                        float: { "0%,100%": { transform: "translateY(0)" }, "50%": { transform: "translateY(-12px)" } },
+                        fade: { "0%": { opacity: 0, transform: "translateY(20px)" }, "100%": { opacity: 1, transform: "translateY(0)" } },
+                        slideLeft: { "0%": { opacity: 0, transform: "translateX(-50px)" }, "100%": { opacity: 1, transform: "translateX(0)" } },
+                        slideRight: { "0%": { opacity: 0, transform: "translateX(50px)" }, "100%": { opacity: 1, transform: "translateX(0)" } }
+                    }
+                }
+            }
+        };
+    </script>
+
+
+</head>
+
+<body class="bg-gray-950 text-white scroll-smooth max-w-7xl mx-auto">
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 bg-black/40 backdrop-blur border-b border-white/10 max-w-7xl">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" onclick="location.reload();"
+                class="text-xl font-bold text-indigo-400 tracking-wide hover:text-indigo-300 transition"> Shanto Roy
+            </a>
+            <div class="space-x-2 text-sm hidden md:block">
+                <a href="#home" data-nav
+                    class="text-gray-300 hover:text-indigo-400 transition border-2 px-3 py-0.5 rounded-2xl">Home</a>
+                <a href="#about" data-nav
+                    class="text-gray-300 hover:text-indigo-400 transition border-2 px-3 py-0.5 rounded-2xl">About</a>
+                <a href="#skills" data-nav
+                    class="text-gray-300 hover:text-indigo-400 transition border-2 px-3 py-0.5 rounded-2xl">Skills</a>
+                <a href="#experience" data-nav
+                    class="text-gray-300 hover:text-indigo-400 transition border-2 px-3 py-0.5 rounded-2xl">Experience</a>
+                <a href="#projects" data-nav
+                    class="text-gray-300 hover:text-indigo-400 transition border-2 px-3 py-0.5 rounded-2xl">Projects</a>
+                <a href="#interests" data-nav
+                    class="text-gray-300 hover:text-indigo-400 transition border-2 px-3 py-0.5 rounded-2xl">Interests</a>
+                <a href="#cv" data-nav
+                    class="text-gray-300 hover:text-indigo-400 transition border-2 px-3 py-0.5 rounded-2xl">CV</a>
+                <a href="#contact" data-nav
+                    class="text-gray-300 hover:text-indigo-400 transition border-2 px-3 py-0.5 rounded-2xl">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home"
+        class="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center animate-fade">
+
+            <!-- IMAGE FIRST ON MOBILE -->
+            <div class="flex justify-center order-1 md:order-2">
+                <div class="relative">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 blur opacity-75">
+                    </div>
+                    <img src="assets/Shanto_Profile.jpg" alt="Shanto Roy"
+                        class="relative w-64 h-64 sm:w-72 sm:h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] object-cover border-4 border-white shadow-2xl">
+                </div>
+            </div>
+
+            <!-- TEXT BELOW IMAGE ON MOBILE -->
+            <div class="text-center md:text-left order-2 md:order-1">
+                <h1 class="text-5xl md:text-6xl font-extrabold mb-6 animate-float">
+                    Hi, I'm <span class="text-yellow-300">Sayan Roy</span>
+                </h1>
+                <p class="text-lg md:text-xl mb-8 text-white/90">
+                    MERN Stack Developer, passionate about building scalable and real-world web applications.
+                </p>
+                <div class="flex flex-wrap max-sm:justify-center gap-4">
+                    <a href="#projects"
+                        class="px-10 py-3 rounded-full bg-black hover:bg-gray-900 transition font-semibold text-center">Projects</a>
+                    <a href="https://github.com/RoyShanto" target="_blank"
+                        class="px-10 py-3 rounded-full border border-white hover:bg-white hover:text-black transition font-semibold text-center">GitHub</a>
+                    <a href="assets/Sayan_CV.pdf" target="_blank" download
+                        class="px-10 py-3 rounded-full bg-yellow-400 text-black font-semibold hover:bg-yellow-500 transition text-center">📄
+                        Download CV</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about"
+        class="py-24 px-6 max-w-5xl mx-auto bg-gray-950 opacity-0 translate-y-12 transition-all duration-1000 ease-out"
+        data-reveal>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+
+            <!-- IMAGE WITH SUBTLE GLOW -->
+            <div class="flex justify-center md:justify-end relative order-1 md:order-2" data-slide="right">
+                <div class="absolute -inset-2 rounded-full bg-purple-500 opacity-20 blur-3xl animate-float"></div>
+                <img src="assets/Layer_1.png" alt="Decorative Layer"
+                    class="relative w-64 md:w-80 lg:w-96 object-contain animate-float">
+            </div>
+
+            <!-- TEXT -->
+            <div class="order-2 md:order-1" data-slide="left">
+                <h2 class="text-4xl font-extrabold mb-2 text-indigo-400"> About Me </h2>
+                <h3 class="text-xl font-semibold mb-6 text-white/90"> Career Objective </h3>
+                <p class="text-gray-300 leading-relaxed mb-8">
+                    Motivated Web Developer with strong problem-solving skills, eager to build scalable applications
+                    and continuously grow with modern technologies. Passionate about transforming ideas into
+                    efficient, user-friendly digital solutions.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-400">
+                    <p class="opacity-0 translate-y-6 animate-fade delay-100">
+                        🌍 Available <span class="text-white">worldwide</span> for remote or on-site projects
+                    </p>
+                    <p class="opacity-0 translate-y-6 animate-fade delay-200">
+                        💻 Specializing in <span class="text-white">MERN Stack Development</span>
+                    </p>
+
+                    <p class="opacity-0 translate-y-6 animate-fade delay-300">
+                        🚀 Passionate about <span class="text-white">solving real-world problems</span>
+                    </p>
+                    <p class="opacity-0 translate-y-6 animate-fade delay-400">
+                        🎯 Focused on <span class="text-white">clean code, performance & scalability</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--PROFESSIONAL SKILLS -->
+    <section id="skills" class="py-24 bg-gray-900 px-6  opacity-0 translate-y-12 transition-all duration-1000 ease-out"
+        data-reveal>
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold mb-10 text-indigo-400 text-center">Professional Skills</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="font-semibold mb-4">Comfortable</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">JavaScript
+                            (ES6)</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">React</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">Node.js</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">HTML5</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">CSS3</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">Bootstrap</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">Tailwind</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">React
+                            Bootstrap</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Familiar</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">Laravel</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">PHP</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">C programming</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">C++</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">C#</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">Python</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">Java</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">Firebase Auth</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Database & Tools</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">MongoDB</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">MySQL</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">GitHub</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">Firebase</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">Netlify</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">Chrome Dev
+                            Tools</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">Visual Studio
+                            code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="pt-24 px-6 max-w-6xl mx-auto">
+        <div class="opacity-0 translate-y-12 transition-all duration-1000 ease-out" data-reveal>
+            <h2 class="text-4xl font-bold mb-10 text-indigo-400">Experience</h2>
+            <div class="space-y-8">
+                <div class="bg-gray-900 p-6 rounded-xl border border-white/10 opacity-0" data-slide="left"
+                    style="animation-delay: 0.1s">
+                    <h3 class="text-xl font-semibold">Instructor (Faculty Member)</h3>
+                    <p class="text-sm text-gray-400">American International University-Bangladesh | Sep 2023 – Dec 2023
+                    </p>
+                    <ul class="list-disc list-inside text-gray-300 mt-3 space-y-1">
+                        <li>Developed course materials, lesson plans, and assessments</li>
+                        <li>Taught and guided undergraduate students</li>
+                        <li>Evaluated assignments, presentations, and exams</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-900 p-6 rounded-xl border border-white/10 opacity-0" data-slide="right"
+                    style="animation-delay: 0.1s">
+                    <h3 class="text-xl font-semibold">NOC Engineer</h3>
+                    <p class="text-sm text-gray-400">Bangla Trac Communication Ltd | Mar 2022 – Nov 2022</p>
+                    <ul class="list-disc list-inside text-gray-300 mt-3 space-y-1">
+                        <li>Monitored ISP & IIG traffic using MRTG, Cacti, Nagios</li>
+                        <li>Worked with international carriers and telecom vendors</li>
+                        <li>Implemented routing policies and voice integrations</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="pt-24 px-6 max-w-6xl mx-auto">
+        <div class="opacity-0 translate-y-12 transition-all duration-1000 ease-out" data-reveal>
+            <h2 class="text-4xl font-bold mb-10 text-indigo-400">Projects</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+
+
+                <div class="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
+                    <h3 class="font-semibold mb-2">Shiftogo</h3>
+                    <p class="text-gray-400 mb-2">Courier Service </p>
+                    <div class="flex gap-2 justify-between">
+                        <!-- <a href="#" target="_blank" class="text-yellow-400 hover:underline text-sm">Live Demo</a> -->
+                        <a href="#" target="_blank" class="text-red-400 hover:underline text-sm">Not Deploy</a>
+                        <a href="https://github.com/RoyShanto/ShiftoGo-client" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">GitHub Client</a>
+                        <a href="https://github.com/RoyShanto/ShiftoGo-server" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">GitHub Server</a>
+                    </div>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
+                    <h3 class="font-semibold mb-2">FindMyTutor</h3>
+                    <p class="text-gray-400 mb-2">MERN Stack based tutor finder platform</p>
+                    <div class="flex gap-2 justify-between">
+                        <!-- <a href="#" target="_blank" class="text-yellow-400 hover:underline text-sm">Live Demo</a> -->
+                        <a href="#" target="_blank" class="text-red-400 hover:underline text-sm">Not Deploy</a>
+                        <a href="https://github.com/RoyShanto/FindMyTutor" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">GitHub Client</a>
+                        <!-- <a href="https://github.com/RoyShanto/ShiftoGo-server" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">GitHub Server</a> -->
+                    </div>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
+                    <h3 class="font-semibold mb-2">TrueSignal-News</h3>
+                    <p class="text-gray-400 mb-2">MERN Stack based News Channel</p>
+                    <div class="flex gap-2 justify-between">
+                        <!-- <a href="#" target="_blank" class="text-yellow-400 hover:underline text-sm">Live Demo</a> -->
+                        <a href="#" target="_blank" class="text-red-400 hover:underline text-sm">Not Deploy</a>
+                        <a href="https://github.com/RoyShanto/TrueSignal-News" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">GitHub Client</a>
+                        <!-- <a href="https://github.com/RoyShanto/sunglass-shop-server" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">GitHub Server</a> -->
+                    </div>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
+                    <h3 class="font-semibold mb-2">Sunglass Shop</h3>
+                    <p class="text-gray-400 mb-2">E-commerce MERN application</p>
+                    <div class="flex gap-2 justify-between">
+                        <a href="https://sunglass-shop-299fb.web.app/" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">Live Demo</a>
+                        <a href="https://github.com/RoyShanto/Sunglass-Shop-client-side" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">GitHub Client</a>
+                        <a href="https://github.com/RoyShanto/Sunglass-Shop-server-side" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">GitHub Server</a>
+                    </div>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
+                    <h3 class="font-semibold mb-2">Gadget Heaven</h3>
+                    <p class="text-gray-400 mb-2">E-commerce Front-end</p>
+                    <div class="flex gap-2 justify-between">
+                        <!-- <a href="#" target="_blank" class="text-yellow-400 hover:underline text-sm">Live Demo</a> -->
+                        <a href="#" target="_blank" class="text-red-400 hover:underline text-sm">Not Deploy</a>
+                        <a href="https://github.com/RoyShanto/gadget-heaven_a8" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">GitHub Client</a>
+                        <!-- <a href="https://github.com/RoyShanto/sunglass-shop-server" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">GitHub Server</a> -->
+                    </div>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
+                    <h3 class="font-semibold mb-2">Bpl-dream</h3>
+                    <p class="text-gray-400 mb-2">Used HTML, daisyUi, JS</p>
+                    <div class="flex gap-2 justify-between">
+                        <!-- <a href="#" target="_blank" class="text-yellow-400 hover:underline text-sm">Live Demo</a> -->
+                        <a href="#" target="_blank" class="text-red-400 hover:underline text-sm">Not Deploy</a>
+                        <a href="https://github.com/RoyShanto/bpl-dream" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">GitHub Client</a>
+                        <!-- <a href="https://github.com/RoyShanto/sunglass-shop-server" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">GitHub Server</a> -->
+                    </div>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
+                    <h3 class="font-semibold mb-2">Adopt Pet</h3>
+                    <p class="text-gray-400 mb-2">Used HTML, daisyUi, JS</p>
+                    <div class="flex gap-2 justify-between">
+                        <a href="https://royshanto.github.io/peddy" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">Live Demo</a>
+                        <a href="https://github.com/RoyShanto/peddy" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">GitHub Client</a>
+                        <!-- <a href="https://github.com/RoyShanto/sunglass-shop-server" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">GitHub Server</a> -->
+                    </div>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
+                    <h3 class="font-semibold mb-2">Donate Bangladesh</h3>
+                    <p class="text-gray-400 mb-2">Used HTML, daisyUi, JS</p>
+                    <div class="flex gap-2 justify-between">
+                        <a href="https://royshanto.github.io/Ass-5" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">Live Demo</a>
+                        <a href="https://github.com/RoyShanto/Ass-5" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">GitHub Client</a>
+                        <!-- <a href="https://github.com/RoyShanto/sunglass-shop-server" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">GitHub Server</a> -->
+                    </div>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
+                    <h3 class="font-semibold mb-2">Interior</h3>
+                    <p class="text-gray-400 mb-2">Used HTML, daisyUi</p>
+                    <div class="flex gap-2 justify-between">
+                        <a href="https://royshanto.github.io/Ass-3_Interior_with_tailwind_daisyui" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">Live Demo</a>
+                        <a href="https://github.com/RoyShanto/Ass-3_Interior_with_tailwind_daisyui" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">GitHub Client</a>
+                        <!-- <a href="https://github.com/RoyShanto/sunglass-shop-server" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">GitHub Server</a> -->
+                    </div>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
+                    <h3 class="font-semibold mb-2">Bike Zone</h3>
+                    <p class="text-gray-400 mb-2">Used HTML, daisyUi</p>
+                    <div class="flex gap-2 justify-between">
+                        <a href="https://royshanto.github.io/practice_bike_with_daisyUi" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">Live Demo</a>
+                        <a href="https://github.com/RoyShanto/practice_bike_with_daisyUi" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">GitHub Client</a>
+                        <!-- <a href="https://github.com/RoyShanto/sunglass-shop-server" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">GitHub Server</a> -->
+                    </div>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
+                    <h3 class="font-semibold mb-2">TastyTea</h3>
+                    <p class="text-gray-400 mb-2">Used HTML, TAILWIND</p>
+                    <div class="flex gap-2 justify-between">
+                        <a href="https://royshanto.github.io/practice-tea-with-tailwind-14" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">Live Demo</a>
+                        <a href="https://github.com/RoyShanto/practice-tea-with-tailwind-14" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">GitHub Client</a>
+                        <!-- <a href="https://github.com/RoyShanto/sunglass-shop-server" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">GitHub Server</a> -->
+                    </div>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
+                    <h3 class="font-semibold mb-2">Fitness</h3>
+                    <p class="text-gray-400 mb-2">Used HTML, CSS</p>
+                    <div class="flex gap-2 justify-between">
+                        <a href="https://royshanto.github.io/Ass-2" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">Live Demo</a>
+                        <a href="https://github.com/RoyShanto/Ass-2" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">GitHub Client</a>
+                        <!-- <a href="https://github.com/RoyShanto/sunglass-shop-server" target="_blank"
+                            class="text-yellow-400 hover:underline text-sm">GitHub Server</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MY INTERESTS SECTION -->
+    <section id="interests" class="pt-24 px-6">
+        <div class="max-w-6xl mx-auto text-center opacity-0 translate-y-12 transition-all duration-1000 ease-out"
+            data-reveal>
+            <h2 class="text-4xl font-bold mb-6 text-indigo-400">My Interests</h2>
+            <p class="text-white/80 mb-12 max-w-2xl mx-auto">
+                Apart from coding, I enjoy exploring technology, creativity, and continuous learning. Here are a few
+                areas I’m passionate about:
+            </p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 flex flex-col items-center text-center
+                       hover:scale-105 hover:-translate-y-2 hover:shadow-2xl transition-transform duration-300 ease-out"
+                    data-slide="left">
+                    <i class="fa-solid fa-code text-4xl text-yellow-300 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-white mb-2">Web Development</h3>
+                    <p class="text-white/80 text-sm">Building scalable and interactive web applications using modern
+                        technologies.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 flex flex-col items-center text-center
+                       hover:scale-105 hover:-translate-y-2 hover:shadow-2xl transition-transform duration-300 ease-out"
+                    data-slide="right">
+                    <i class="fa-solid fa-paint-brush text-4xl text-pink-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-white mb-2">UI/UX Design</h3>
+                    <p class="text-white/80 text-sm">Creating intuitive interfaces and enjoyable user experiences.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 flex flex-col items-center text-center
+                       hover:scale-105 hover:-translate-y-2 hover:shadow-2xl transition-transform duration-300 ease-out"
+                    data-slide="left">
+                    <i class="fa-solid fa-rocket text-4xl text-indigo-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-white mb-2">Tech Exploration</h3>
+                    <p class="text-white/80 text-sm">Experimenting with new frameworks, tools, and emerging
+                        technologies.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 flex flex-col items-center text-center
+                       hover:scale-105 hover:-translate-y-2 hover:shadow-2xl transition-transform duration-300 ease-out"
+                    data-slide="right">
+                    <i class="fa-solid fa-book text-4xl text-green-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-white mb-2">Learning & Growth</h3>
+                    <p class="text-white/80 text-sm">Continuous self-learning and improving my skills every day.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 flex flex-col items-center text-center
+                       hover:scale-105 hover:-translate-y-2 hover:shadow-2xl transition-transform duration-300 ease-out"
+                    data-slide="left">
+                    <i class="fa-solid fa-music text-4xl text-purple-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-white mb-2">Music & Creativity</h3>
+                    <p class="text-white/80 text-sm">Exploring music, arts, and other creative outlets to stay inspired.
+                    </p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 flex flex-col items-center text-center
+                       hover:scale-105 hover:-translate-y-2 hover:shadow-2xl transition-transform duration-300 ease-out"
+                    data-slide="right">
+                    <i class="fa-solid fa-gamepad text-4xl text-red-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-white mb-2">Gaming & Strategy</h3>
+                    <p class="text-white/80 text-sm">Enjoying strategic games that challenge problem-solving skills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV SECTION -->
+    <section id="cv" class="min-h-screen bg-gray-950 px-4 md:px-6 py-24">
+        <div class="max-w-6xl mx-auto opacity-0 translate-y-12 transition-all duration-1000 ease-out" data-reveal>
+            <div class="text-center mb-6">
+                <h2 class="text-3xl md:text-5xl font-bold text-indigo-400 mb-2">Curriculum Vitae</h2>
+                <p class="text-gray-400 text-sm md:text-base">Scroll to view my complete CV</p>
+            </div>
+            <div
+                class="w-full h-[65vh] max-sm:h-[70vh] md:h-[80vh] lg:h-[90vh] rounded-2xl overflow-hidden border border-white/20 shadow-2xl bg-black">
+                <iframe src="assets/Shanto_CV.pdf" class="w-full h-full" loading="lazy"></iframe>
+            </div>
+            <p class="text-center text-gray-400 text-sm mt-3 md:hidden">
+                If CV does not display properly, please
+                <a href="assets/Shanto_CV.pdf" target="_blank" class="text-indigo-400 underline">download the PDF</a>.
+            </p>
+            <div class="flex justify-center gap-4 mt-6">
+                <a href="assets/Shanto_CV.pdf" target="_blank" download
+                    class="px-8 py-3 rounded-full border border-white hover:bg-white hover:text-black transition transform hover:-translate-y-1 hover:scale-105 font-semibold">📄
+                    Download
+                    CV</a>
+                <a href="#home"
+                    class="px-8 py-3 rounded-full bg-indigo-600 hover:bg-indigo-700 transition transform hover:-translate-y-1 hover:scale-105 font-semibold">Back
+                    to Top</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA + CONTACT (LEFT / RIGHT with Divider + Magnetic Buttons) -->
+    <section id="contact" class="py-24 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 px-6">
+        <div class="max-w-6xl mx-auto opacity-0 translate-y-12 transition-all duration-1000 ease-out" data-reveal>
+            <div class="relative grid md:grid-cols-[1fr_auto_1fr] gap-16 items-center">
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-4">
+                        Have a <span class="text-yellow-300">PROJECT</span> in mind?
+                    </h2>
+                    <p class="text-lg md:text-xl text-white/90 mb-10">
+                        I’m always open for projects or collaboration. Let’s connect and build something amazing!
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-6 justify-center md:justify-start">
+                        <a href="mailto:roycse17@gmail.com"
+                            class="magnetic px-10 py-4 rounded-full bg-black text-white font-semibold hover:bg-gray-900 transition transform hover:-translate-y-1 hover:scale-105">
+                            📧 Email Me
+                        </a>
+                        <a href="https://wa.me/8801627167955" target="_blank"
+                            class="magnetic px-10 py-4 rounded-full bg-green-500 text-black font-semibold hover:bg-green-600 transition transform hover:-translate-y-1 hover:scale-105">
+                            💬 WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex justify-center relative">
+                    <div id="gradient-divider"
+                        class="w-px h-60 rounded-full bg-gradient-to-b from-indigo-400 via-pink-400 to-purple-400 opacity-70">
+                    </div>
+                    <div id="divider-glow"
+                        class="absolute w-24 h-24 rounded-full blur-3xl opacity-60 pointer-events-none"
+                        style="background: radial-gradient(circle, rgba(255,255,255,0.5), transparent 60%);">
+                    </div>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-3xl font-bold text-white mb-4">
+                        Contact
+                    </h3>
+
+                    <p class="mb-6 text-white/70">
+                        🌍 Available worldwide for remote projects
+                    </p>
+
+
+                    <div class="flex flex-wrap justify-center gap-6">
+                        <a href="mailto:roycse17@gmail.com"
+                            class="magnetic w-14 h-14 flex items-center justify-center rounded-full border border-white/40 hover:bg-gray-900 transition transform hover:-translate-y-1"
+                            title="Email">
+                            <i class="fa-solid fa-envelope text-xl"></i>
+                        </a>
+                        <a href="https://wa.me/8801627167955" target="_blank"
+                            class="magnetic w-14 h-14 flex items-center justify-center rounded-full border border-white/40 hover:bg-green-600 transition transform hover:-translate-y-1"
+                            title="WhatsApp">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/shanto-roy-809511190/" target="_blank"
+                            class="magnetic w-14 h-14 flex items-center justify-center rounded-full border border-white/40 hover:bg-white hover:text-black transition transform hover:-translate-y-1"
+                            title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="https://github.com/RoyShanto/" target="_blank"
+                            class="magnetic w-14 h-14 flex items-center justify-center rounded-full border border-white/40 hover:bg-white hover:text-black transition transform hover:-translate-y-1"
+                            title="GitHub">
+                            <i class="fa-brands fa-github text-xl"></i>
+                        </a>
+                        <a href="https://www.facebook.com/krishAAnroy" target="_blank"
+                            class="magnetic w-14 h-14 flex items-center justify-center rounded-full border border-white/40 hover:bg-blue-600 hover:text-white transition transform hover:-translate-y-1"
+                            title="Facebook">
+                            <i class="fa-brands fa-facebook-f text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <section class="pb-60">
+        <div class="h-1 w-full bg-gradient-to-r from-indigo-400 via-pink-400 to-purple-400 mt-3"></div>
+        <footer class="py-6 text-center text-gray-400 bg-black">
+            © 2026 <span class="text-indigo-400 font-semibold">Shanto Roy</span>. All rights reserved.
+        </footer>
+    </section>
+
+    <!-- BACK TO TOP BUTTON (FLOATING) -->
+    <button id="backToTop"
+        class="fixed bottom-6 right-6 w-14 h-14 flex items-center justify-center rounded-full bg-indigo-600 text-white shadow-lg hover:bg-indigo-500 transition transform animate-float z-50 opacity-0 pointer-events-none">
+        <i class="fa-solid fa-arrow-up text-xl"></i>
+    </button>
+
+
+
+    <script>
+        // Smooth scroll for all internal anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                const target = document.querySelector(targetId);
+                if (!target) return;
+
+                e.preventDefault();
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+
+
+        // Reveal on scroll
+        const revealElements = document.querySelectorAll("[data-reveal]");
+        const isMobile = window.innerWidth < 768;
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        revealElements.forEach(el => {
+            if (isMobile) {
+                el.classList.remove("duration-1000", "translate-y-12");
+                el.classList.add("duration-500", "translate-y-6");
+            }
+            if (prefersReducedMotion) {
+                el.classList.remove("opacity-0", "translate-y-12", "translate-y-6");
+                el.classList.add("opacity-100", "translate-y-0");
+            }
+        });
+
+        if (!prefersReducedMotion) {
+            const revealOnScroll = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.remove("opacity-0", "translate-y-12", "translate-y-6");
+                        entry.target.classList.add("opacity-100", "translate-y-0");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: isMobile ? 0.15 : 0.25 });
+            revealElements.forEach(el => revealOnScroll.observe(el));
+        }
+
+        // Navbar active state
+        const sections = document.querySelectorAll("section[id]");
+        const navLinks = document.querySelectorAll("[data-nav]");
+        const activateNav = () => {
+            let currentSection = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 140;
+                if (window.scrollY >= sectionTop) currentSection = section.getAttribute("id");
+            });
+            navLinks.forEach(link => {
+                link.classList.remove("text-indigo-400", "border-indigo-400");
+                link.classList.add("text-gray-300", "border-transparent");
+                if (link.getAttribute("href") === `#${currentSection}`) {
+                    link.classList.add("text-indigo-400", "border-indigo-400");
+                    link.classList.remove("text-gray-300", "border-transparent");
+                }
+            });
+        };
+        window.addEventListener("scroll", activateNav);
+        window.addEventListener("load", activateNav);
+
+        // Smooth Magnetic Button Effect
+        const magneticButtons = document.querySelectorAll('.magnetic');
+
+        magneticButtons.forEach(button => {
+            let mouseX = 0, mouseY = 0;
+            let btnX = 0, btnY = 0;
+            const strength = 25; // max pixels the button moves
+            const ease = 0.25; // lower = smoother/slower
+
+            const rect = button.getBoundingClientRect();
+
+            button.addEventListener('mousemove', (e) => {
+                const rect = button.getBoundingClientRect();
+                mouseX = (e.clientX - rect.left - rect.width / 2) / rect.width * strength;
+                mouseY = (e.clientY - rect.top - rect.height / 2) / rect.height * strength;
+            });
+
+            button.addEventListener('mouseleave', () => {
+                mouseX = 0;
+                mouseY = 0;
+            });
+
+            function animate() {
+                btnX += (mouseX - btnX) * ease;
+                btnY += (mouseY - btnY) * ease;
+                button.style.transform = `translate(${btnX}px, ${btnY}px) scale(1.05)`;
+                requestAnimationFrame(animate);
+            }
+            animate();
+        });
+
+
+
+        // BACK TO TOP BUTTON
+        const backToTopButton = document.getElementById("backToTop");
+
+        // Function to show/hide button
+        function toggleBackToTop() {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.remove("opacity-0", "pointer-events-none");
+                backToTopButton.classList.add("opacity-100", "pointer-events-auto");
+            } else {
+                backToTopButton.classList.add("opacity-0", "pointer-events-none");
+                backToTopButton.classList.remove("opacity-100", "pointer-events-auto");
+            }
+        }
+
+        // Show/hide on scroll
+        window.addEventListener("scroll", toggleBackToTop);
+
+        // Run once on page load (handles reload while scrolled)
+        window.addEventListener("load", toggleBackToTop);
+
+        // Smooth scroll to top on click
+        backToTopButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
+
+
+        const experienceCards = document.querySelectorAll("[data-slide]");
+
+        const slideObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const direction = entry.target.getAttribute("data-slide");
+                    entry.target.classList.remove("opacity-0");
+                    if (direction === "left") {
+                        entry.target.classList.add("animate-slide-left");
+                    } else {
+                        entry.target.classList.add("animate-slide-right");
+                    }
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.25 });
+
+        experienceCards.forEach(card => slideObserver.observe(card));
+
+    </script>
+</body>
+
+</html>
