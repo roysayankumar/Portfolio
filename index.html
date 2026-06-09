@@ -59,13 +59,13 @@
 
 </head>
 
-<body class="bg-gray-950 text-white scroll-smooth max-w-7xl mx-auto">
+<body class="bg-gray-950 text-white scroll-smooth relative">
 
     <!-- NAVBAR -->
-    <nav class="fixed w-full z-50 bg-black/40 backdrop-blur border-b border-white/10 max-w-7xl">
+    <nav class="fixed w-full z-50 bg-black/40 backdrop-blur border-b border-white/10">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" onclick="location.reload();"
-                class="text-xl font-bold text-indigo-400 tracking-wide hover:text-indigo-300 transition"> Shanto Roy
+                class="text-xl font-bold text-indigo-400 tracking-wide hover:text-indigo-300 transition"> Sayan Roy
             </a>
             <div class="space-x-2 text-sm hidden md:block">
                 <a href="#home" data-nav
@@ -93,33 +93,55 @@
         class="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center animate-fade">
 
-            <!-- IMAGE FIRST ON MOBILE -->
+            <!-- IMAGE -->
             <div class="flex justify-center order-1 md:order-2">
-                <div class="relative">
+                <div class="relative group">
+                    <!-- Glow -->
                     <div
-                        class="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 blur opacity-75">
+                        class="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 blur opacity-75 group-hover:opacity-100 transition duration-500">
                     </div>
-                    <img src="assets/Shanto_Profile.jpg" alt="Shanto Roy"
-                        class="relative w-64 h-64 sm:w-72 sm:h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] object-cover border-4 border-white shadow-2xl">
+
+                    <!-- Profile Image -->
+                    <img src="assets/Sayan_Profile.jpg" alt="Sayan Kumar Roy"
+                        class="relative w-64 h-64 sm:w-72 sm:h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] object-cover border-4 border-white shadow-2xl transform group-hover:scale-105 transition duration-500">
                 </div>
             </div>
 
-            <!-- TEXT BELOW IMAGE ON MOBILE -->
+            <!-- TEXT -->
             <div class="text-center md:text-left order-2 md:order-1">
-                <h1 class="text-5xl md:text-6xl font-extrabold mb-6 animate-float">
-                    Hi, I'm <span class="text-yellow-300">Sayan Roy</span>
+
+                <h1 class="text-5xl md:text-6xl font-extrabold mb-6 animate-float leading-tight">
+                    Hi, I'm <br>
+                    <span class="text-yellow-300">Sayan Kumar Roy</span>
                 </h1>
-                <p class="text-lg md:text-xl mb-8 text-white/90">
-                    MERN Stack Developer, passionate about building scalable and real-world web applications.
+
+                <p class="text-lg md:text-xl mb-6 text-white/90">
+                    AI & Machine Learning Enthusiast
                 </p>
+
+                <p class="text-md md:text-lg mb-8 text-white/80 max-w-xl">
+                    Passionate about solving real-world problems using data-driven approaches,
+                    machine learning, and intelligent systems. Skilled in TensorFlow, Keras, and data analysis.
+                </p>
+
+                <!-- BUTTONS -->
                 <div class="flex flex-wrap max-sm:justify-center gap-4">
+
                     <a href="#projects"
-                        class="px-10 py-3 rounded-full bg-black hover:bg-gray-900 transition font-semibold text-center">Projects</a>
-                    <a href="https://github.com/RoyShanto" target="_blank"
-                        class="px-10 py-3 rounded-full border border-white hover:bg-white hover:text-black transition font-semibold text-center">GitHub</a>
+                        class="px-10 py-3 rounded-full bg-black hover:bg-gray-900 transition font-semibold text-center transform hover:-translate-y-1 hover:scale-105">
+                        🚀 View Projects
+                    </a>
+
+                    <a href="https://github.com/sayan-1-roy" target="_blank"
+                        class="px-10 py-3 rounded-full border border-white hover:bg-white hover:text-black transition font-semibold text-center transform hover:-translate-y-1 hover:scale-105">
+                        💻 GitHub
+                    </a>
+
                     <a href="assets/Sayan_CV.pdf" target="_blank" download
-                        class="px-10 py-3 rounded-full bg-yellow-400 text-black font-semibold hover:bg-yellow-500 transition text-center">📄
-                        Download CV</a>
+                        class="px-10 py-3 rounded-full bg-yellow-400 text-black font-semibold hover:bg-yellow-500 transition text-center transform hover:-translate-y-1 hover:scale-105">
+                        📄 Download CV
+                    </a>
+
                 </div>
             </div>
 
@@ -127,16 +149,15 @@
     </section>
 
     <!-- ABOUT -->
-    <section id="about"
-        class="py-24 px-6 max-w-5xl mx-auto bg-gray-950 opacity-0 translate-y-12 transition-all duration-1000 ease-out"
+    <section id="about" class="py-24 px-6 bg-gray-950 opacity-0 translate-y-12 transition-all duration-1000 ease-out"
         data-reveal>
 
-        <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
-            <!-- IMAGE WITH SUBTLE GLOW -->
+            <!-- IMAGE -->
             <div class="flex justify-center md:justify-end relative order-1 md:order-2" data-slide="right">
                 <div class="absolute -inset-2 rounded-full bg-purple-500 opacity-20 blur-3xl animate-float"></div>
-                <img src="assets/Layer_1.png" alt="Decorative Layer"
+                <img src="assets/Layer_1.png" alt="AI Illustration"
                     class="relative w-64 md:w-80 lg:w-96 object-contain animate-float">
             </div>
 
@@ -144,437 +165,371 @@
             <div class="order-2 md:order-1" data-slide="left">
                 <h2 class="text-4xl font-extrabold mb-2 text-indigo-400"> About Me </h2>
                 <h3 class="text-xl font-semibold mb-6 text-white/90"> Career Objective </h3>
+
                 <p class="text-gray-300 leading-relaxed mb-8">
-                    Motivated Web Developer with strong problem-solving skills, eager to build scalable applications
-                    and continuously grow with modern technologies. Passionate about transforming ideas into
-                    efficient, user-friendly digital solutions.
+                    I am a Computer Science graduate with a strong interest in data analysis and machine learning-based
+                    solutions.
+                    I am passionate about solving real-world problems through data-driven decision-making and
+                    algorithmic modeling.
+                    I have hands-on experience working with TensorFlow, Keras, and various data analysis tools, and I
+                    continuously
+                    strive to improve my technical and research skills.
                 </p>
 
+                <!-- HIGHLIGHTS -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-400">
+
                     <p class="opacity-0 translate-y-6 animate-fade delay-100">
-                        🌍 Available <span class="text-white">worldwide</span> for remote or on-site projects
+                        🤖 Focused on <span class="text-white">AI & Machine Learning</span>
                     </p>
+
                     <p class="opacity-0 translate-y-6 animate-fade delay-200">
-                        💻 Specializing in <span class="text-white">MERN Stack Development</span>
+                        📊 Skilled in <span class="text-white">Data Analysis & Modeling</span>
                     </p>
 
                     <p class="opacity-0 translate-y-6 animate-fade delay-300">
-                        🚀 Passionate about <span class="text-white">solving real-world problems</span>
+                        🚀 Passionate about <span class="text-white">real-world problem solving</span>
                     </p>
+
                     <p class="opacity-0 translate-y-6 animate-fade delay-400">
-                        🎯 Focused on <span class="text-white">clean code, performance & scalability</span>
+                        🎯 Strong in <span class="text-white">research & continuous learning</span>
                     </p>
+
                 </div>
             </div>
         </div>
     </section>
 
     <!--PROFESSIONAL SKILLS -->
-    <section id="skills" class="py-24 bg-gray-900 px-6  opacity-0 translate-y-12 transition-all duration-1000 ease-out"
+    <section id="skills" class="py-24 bg-gray-900 px-6 opacity-0 translate-y-12 transition-all duration-1000 ease-out"
         data-reveal>
         <div class="max-w-6xl mx-auto">
             <h2 class="text-4xl font-bold mb-10 text-indigo-400 text-center">Professional Skills</h2>
+
             <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Programming Languages -->
                 <div>
-                    <h3 class="font-semibold mb-4">Comfortable</h3>
+                    <h3 class="font-semibold mb-4">Programming Languages</h3>
                     <div class="flex flex-wrap gap-3">
-                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">JavaScript
-                            (ES6)</span>
-                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">React</span>
-                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">Node.js</span>
-                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">HTML5</span>
-                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">CSS3</span>
-                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">Bootstrap</span>
-                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">Tailwind</span>
-                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">React
-                            Bootstrap</span>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="font-semibold mb-4">Familiar</h3>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">Laravel</span>
-                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">PHP</span>
-                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">C programming</span>
-                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">C++</span>
-                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">C#</span>
                         <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">Python</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">C++</span>
                         <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">Java</span>
-                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">Firebase Auth</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">R</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">C#</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">JavaScript</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">HTML</span>
                     </div>
                 </div>
+
+                <!-- AI / ML & Data Tools -->
                 <div>
-                    <h3 class="font-semibold mb-4">Database & Tools</h3>
+                    <h3 class="font-semibold mb-4">AI / ML & Data Tools</h3>
                     <div class="flex flex-wrap gap-3">
-                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">MongoDB</span>
-                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">MySQL</span>
-                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">GitHub</span>
-                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">Firebase</span>
-                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">Netlify</span>
-                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">Chrome Dev
-                            Tools</span>
-                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">Visual Studio
-                            code</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">TensorFlow</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">Keras</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">PyTorch</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">NumPy</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">Pandas</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">OpenCV</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">Google Colab</span>
                     </div>
                 </div>
+
+                <!-- Tools & Technologies -->
+                <div>
+                    <h3 class="font-semibold mb-4">Tools & Technologies</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">GitHub</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">MATLAB</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">AutoCAD</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">Emu8086</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">MS Word</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full hover:scale-105 transition">PowerPoint</span>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="pt-24 px-6 max-w-6xl mx-auto">
-        <div class="opacity-0 translate-y-12 transition-all duration-1000 ease-out" data-reveal>
-            <h2 class="text-4xl font-bold mb-10 text-indigo-400">Experience</h2>
-            <div class="space-y-8">
-                <div class="bg-gray-900 p-6 rounded-xl border border-white/10 opacity-0" data-slide="left"
-                    style="animation-delay: 0.1s">
-                    <h3 class="text-xl font-semibold">Instructor (Faculty Member)</h3>
-                    <p class="text-sm text-gray-400">American International University-Bangladesh | Sep 2023 – Dec 2023
-                    </p>
-                    <ul class="list-disc list-inside text-gray-300 mt-3 space-y-1">
-                        <li>Developed course materials, lesson plans, and assessments</li>
-                        <li>Taught and guided undergraduate students</li>
-                        <li>Evaluated assignments, presentations, and exams</li>
-                    </ul>
-                </div>
-
-                <div class="bg-gray-900 p-6 rounded-xl border border-white/10 opacity-0" data-slide="right"
-                    style="animation-delay: 0.1s">
-                    <h3 class="text-xl font-semibold">NOC Engineer</h3>
-                    <p class="text-sm text-gray-400">Bangla Trac Communication Ltd | Mar 2022 – Nov 2022</p>
-                    <ul class="list-disc list-inside text-gray-300 mt-3 space-y-1">
-                        <li>Monitored ISP & IIG traffic using MRTG, Cacti, Nagios</li>
-                        <li>Worked with international carriers and telecom vendors</li>
-                        <li>Implemented routing policies and voice integrations</li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-    </section>
 
     <!-- PROJECTS -->
     <section id="projects" class="pt-24 px-6 max-w-6xl mx-auto">
         <div class="opacity-0 translate-y-12 transition-all duration-1000 ease-out" data-reveal>
+
             <h2 class="text-4xl font-bold mb-10 text-indigo-400">Projects</h2>
+
             <div class="grid md:grid-cols-3 gap-8">
 
+                <!-- Project 1 -->
+                <div class="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
+                    <h3 class="font-semibold mb-2">Amazon Review Clustering</h3>
+                    <p class="text-gray-400 mb-2">
+                        Developed an NLP pipeline using TF-IDF, PCA, and clustering algorithms (K-Means, DBSCAN) to
+                        analyze 200k+ Amazon reviews.
+                    </p>
+                    <p class="text-sm text-gray-500">Tech: Python, Scikit-learn, NLP</p>
+                </div>
 
+                <!-- Project 2 -->
                 <div class="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
-                    <h3 class="font-semibold mb-2">Shiftogo</h3>
-                    <p class="text-gray-400 mb-2">Courier Service </p>
-                    <div class="flex gap-2 justify-between">
-                        <!-- <a href="#" target="_blank" class="text-yellow-400 hover:underline text-sm">Live Demo</a> -->
-                        <a href="#" target="_blank" class="text-red-400 hover:underline text-sm">Not Deploy</a>
-                        <a href="https://github.com/RoyShanto/ShiftoGo-client" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">GitHub Client</a>
-                        <a href="https://github.com/RoyShanto/ShiftoGo-server" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">GitHub Server</a>
-                    </div>
+                    <h3 class="font-semibold mb-2">Handwritten Digit Recognition</h3>
+                    <p class="text-gray-400 mb-2">
+                        Built a CNN-based model using TensorFlow/Keras to recognize digits with ~98% accuracy and
+                        real-time detection using OpenCV.
+                    </p>
+                    <p class="text-sm text-gray-500">Tech: TensorFlow, Keras, OpenCV</p>
                 </div>
+
+                <!-- Project 3 -->
                 <div class="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
-                    <h3 class="font-semibold mb-2">FindMyTutor</h3>
-                    <p class="text-gray-400 mb-2">MERN Stack based tutor finder platform</p>
-                    <div class="flex gap-2 justify-between">
-                        <!-- <a href="#" target="_blank" class="text-yellow-400 hover:underline text-sm">Live Demo</a> -->
-                        <a href="#" target="_blank" class="text-red-400 hover:underline text-sm">Not Deploy</a>
-                        <a href="https://github.com/RoyShanto/FindMyTutor" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">GitHub Client</a>
-                        <!-- <a href="https://github.com/RoyShanto/ShiftoGo-server" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">GitHub Server</a> -->
-                    </div>
+                    <h3 class="font-semibold mb-2">Animal Image Classification</h3>
+                    <p class="text-gray-400 mb-2">
+                        Implemented KNN-based image classification using OpenCV and cross-validation for optimal
+                        performance.
+                    </p>
+                    <p class="text-sm text-gray-500">Tech: Python, OpenCV, KNN</p>
                 </div>
+
+                <!-- Project 4 -->
                 <div class="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
-                    <h3 class="font-semibold mb-2">TrueSignal-News</h3>
-                    <p class="text-gray-400 mb-2">MERN Stack based News Channel</p>
-                    <div class="flex gap-2 justify-between">
-                        <!-- <a href="#" target="_blank" class="text-yellow-400 hover:underline text-sm">Live Demo</a> -->
-                        <a href="#" target="_blank" class="text-red-400 hover:underline text-sm">Not Deploy</a>
-                        <a href="https://github.com/RoyShanto/TrueSignal-News" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">GitHub Client</a>
-                        <!-- <a href="https://github.com/RoyShanto/sunglass-shop-server" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">GitHub Server</a> -->
-                    </div>
+                    <h3 class="font-semibold mb-2">Custom Neural Network</h3>
+                    <p class="text-gray-400 mb-2">
+                        Built a deep neural network with 4 hidden layers and dropout for multi-class classification
+                        achieving 79% accuracy.
+                    </p>
+                    <p class="text-sm text-gray-500">Tech: Python, Neural Networks</p>
                 </div>
+
+                <!-- Project 5 -->
                 <div class="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
-                    <h3 class="font-semibold mb-2">Sunglass Shop</h3>
-                    <p class="text-gray-400 mb-2">E-commerce MERN application</p>
-                    <div class="flex gap-2 justify-between">
-                        <a href="https://sunglass-shop-299fb.web.app/" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">Live Demo</a>
-                        <a href="https://github.com/RoyShanto/Sunglass-Shop-client-side" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">GitHub Client</a>
-                        <a href="https://github.com/RoyShanto/Sunglass-Shop-server-side" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">GitHub Server</a>
-                    </div>
+                    <h3 class="font-semibold mb-2">Coaching Management System</h3>
+                    <p class="text-gray-400 mb-2">
+                        Developed a desktop system to manage students, schedules, and fees with automated reporting.
+                    </p>
+                    <p class="text-sm text-gray-500">Tech: C#, PL/SQL</p>
                 </div>
+
+                <!-- Project 6 -->
                 <div class="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
-                    <h3 class="font-semibold mb-2">Gadget Heaven</h3>
-                    <p class="text-gray-400 mb-2">E-commerce Front-end</p>
-                    <div class="flex gap-2 justify-between">
-                        <!-- <a href="#" target="_blank" class="text-yellow-400 hover:underline text-sm">Live Demo</a> -->
-                        <a href="#" target="_blank" class="text-red-400 hover:underline text-sm">Not Deploy</a>
-                        <a href="https://github.com/RoyShanto/gadget-heaven_a8" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">GitHub Client</a>
-                        <!-- <a href="https://github.com/RoyShanto/sunglass-shop-server" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">GitHub Server</a> -->
-                    </div>
+                    <h3 class="font-semibold mb-2">Registration & Login System</h3>
+                    <p class="text-gray-400 mb-2">
+                        Built a web-based authentication system with form validation and user input handling.
+                    </p>
+                    <p class="text-sm text-gray-500">Tech: HTML, JavaScript</p>
                 </div>
-                <div class="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
-                    <h3 class="font-semibold mb-2">Bpl-dream</h3>
-                    <p class="text-gray-400 mb-2">Used HTML, daisyUi, JS</p>
-                    <div class="flex gap-2 justify-between">
-                        <!-- <a href="#" target="_blank" class="text-yellow-400 hover:underline text-sm">Live Demo</a> -->
-                        <a href="#" target="_blank" class="text-red-400 hover:underline text-sm">Not Deploy</a>
-                        <a href="https://github.com/RoyShanto/bpl-dream" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">GitHub Client</a>
-                        <!-- <a href="https://github.com/RoyShanto/sunglass-shop-server" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">GitHub Server</a> -->
-                    </div>
-                </div>
-                <div class="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
-                    <h3 class="font-semibold mb-2">Adopt Pet</h3>
-                    <p class="text-gray-400 mb-2">Used HTML, daisyUi, JS</p>
-                    <div class="flex gap-2 justify-between">
-                        <a href="https://royshanto.github.io/peddy" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">Live Demo</a>
-                        <a href="https://github.com/RoyShanto/peddy" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">GitHub Client</a>
-                        <!-- <a href="https://github.com/RoyShanto/sunglass-shop-server" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">GitHub Server</a> -->
-                    </div>
-                </div>
-                <div class="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
-                    <h3 class="font-semibold mb-2">Donate Bangladesh</h3>
-                    <p class="text-gray-400 mb-2">Used HTML, daisyUi, JS</p>
-                    <div class="flex gap-2 justify-between">
-                        <a href="https://royshanto.github.io/Ass-5" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">Live Demo</a>
-                        <a href="https://github.com/RoyShanto/Ass-5" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">GitHub Client</a>
-                        <!-- <a href="https://github.com/RoyShanto/sunglass-shop-server" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">GitHub Server</a> -->
-                    </div>
-                </div>
-                <div class="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
-                    <h3 class="font-semibold mb-2">Interior</h3>
-                    <p class="text-gray-400 mb-2">Used HTML, daisyUi</p>
-                    <div class="flex gap-2 justify-between">
-                        <a href="https://royshanto.github.io/Ass-3_Interior_with_tailwind_daisyui" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">Live Demo</a>
-                        <a href="https://github.com/RoyShanto/Ass-3_Interior_with_tailwind_daisyui" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">GitHub Client</a>
-                        <!-- <a href="https://github.com/RoyShanto/sunglass-shop-server" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">GitHub Server</a> -->
-                    </div>
-                </div>
-                <div class="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
-                    <h3 class="font-semibold mb-2">Bike Zone</h3>
-                    <p class="text-gray-400 mb-2">Used HTML, daisyUi</p>
-                    <div class="flex gap-2 justify-between">
-                        <a href="https://royshanto.github.io/practice_bike_with_daisyUi" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">Live Demo</a>
-                        <a href="https://github.com/RoyShanto/practice_bike_with_daisyUi" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">GitHub Client</a>
-                        <!-- <a href="https://github.com/RoyShanto/sunglass-shop-server" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">GitHub Server</a> -->
-                    </div>
-                </div>
-                <div class="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
-                    <h3 class="font-semibold mb-2">TastyTea</h3>
-                    <p class="text-gray-400 mb-2">Used HTML, TAILWIND</p>
-                    <div class="flex gap-2 justify-between">
-                        <a href="https://royshanto.github.io/practice-tea-with-tailwind-14" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">Live Demo</a>
-                        <a href="https://github.com/RoyShanto/practice-tea-with-tailwind-14" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">GitHub Client</a>
-                        <!-- <a href="https://github.com/RoyShanto/sunglass-shop-server" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">GitHub Server</a> -->
-                    </div>
-                </div>
-                <div class="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
-                    <h3 class="font-semibold mb-2">Fitness</h3>
-                    <p class="text-gray-400 mb-2">Used HTML, CSS</p>
-                    <div class="flex gap-2 justify-between">
-                        <a href="https://royshanto.github.io/Ass-2" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">Live Demo</a>
-                        <a href="https://github.com/RoyShanto/Ass-2" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">GitHub Client</a>
-                        <!-- <a href="https://github.com/RoyShanto/sunglass-shop-server" target="_blank"
-                            class="text-yellow-400 hover:underline text-sm">GitHub Server</a> -->
-                    </div>
-                </div>
+
             </div>
+
         </div>
     </section>
-
     <!-- MY INTERESTS SECTION -->
     <section id="interests" class="pt-24 px-6">
         <div class="max-w-6xl mx-auto text-center opacity-0 translate-y-12 transition-all duration-1000 ease-out"
             data-reveal>
+
             <h2 class="text-4xl font-bold mb-6 text-indigo-400">My Interests</h2>
+
             <p class="text-white/80 mb-12 max-w-2xl mx-auto">
-                Apart from coding, I enjoy exploring technology, creativity, and continuous learning. Here are a few
-                areas I’m passionate about:
+                Beyond academics, I am deeply interested in artificial intelligence, data science, and continuous
+                learning.
+                I enjoy exploring new technologies and applying them to solve real-world problems.
             </p>
+
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 flex flex-col items-center text-center
-                       hover:scale-105 hover:-translate-y-2 hover:shadow-2xl transition-transform duration-300 ease-out"
+
+                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 text-center hover:scale-105 transition"
                     data-slide="left">
-                    <i class="fa-solid fa-code text-4xl text-yellow-300 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-white mb-2">Web Development</h3>
-                    <p class="text-white/80 text-sm">Building scalable and interactive web applications using modern
-                        technologies.</p>
-                </div>
-                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 flex flex-col items-center text-center
-                       hover:scale-105 hover:-translate-y-2 hover:shadow-2xl transition-transform duration-300 ease-out"
-                    data-slide="right">
-                    <i class="fa-solid fa-paint-brush text-4xl text-pink-400 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-white mb-2">UI/UX Design</h3>
-                    <p class="text-white/80 text-sm">Creating intuitive interfaces and enjoyable user experiences.</p>
-                </div>
-                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 flex flex-col items-center text-center
-                       hover:scale-105 hover:-translate-y-2 hover:shadow-2xl transition-transform duration-300 ease-out"
-                    data-slide="left">
-                    <i class="fa-solid fa-rocket text-4xl text-indigo-400 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-white mb-2">Tech Exploration</h3>
-                    <p class="text-white/80 text-sm">Experimenting with new frameworks, tools, and emerging
-                        technologies.</p>
-                </div>
-                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 flex flex-col items-center text-center
-                       hover:scale-105 hover:-translate-y-2 hover:shadow-2xl transition-transform duration-300 ease-out"
-                    data-slide="right">
-                    <i class="fa-solid fa-book text-4xl text-green-400 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-white mb-2">Learning & Growth</h3>
-                    <p class="text-white/80 text-sm">Continuous self-learning and improving my skills every day.</p>
-                </div>
-                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 flex flex-col items-center text-center
-                       hover:scale-105 hover:-translate-y-2 hover:shadow-2xl transition-transform duration-300 ease-out"
-                    data-slide="left">
-                    <i class="fa-solid fa-music text-4xl text-purple-400 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-white mb-2">Music & Creativity</h3>
-                    <p class="text-white/80 text-sm">Exploring music, arts, and other creative outlets to stay inspired.
+                    <i class="fa-solid fa-brain text-4xl text-yellow-300 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Machine Learning</h3>
+                    <p class="text-white/80 text-sm">
+                        Building intelligent systems and predictive models using data.
                     </p>
                 </div>
-                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 flex flex-col items-center text-center
-                       hover:scale-105 hover:-translate-y-2 hover:shadow-2xl transition-transform duration-300 ease-out"
+
+                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 text-center hover:scale-105 transition"
+                    data-slide="right">
+                    <i class="fa-solid fa-database text-4xl text-green-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Data Analysis</h3>
+                    <p class="text-white/80 text-sm">
+                        Extracting insights from data using analytical and statistical techniques.
+                    </p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 text-center hover:scale-105 transition"
+                    data-slide="left">
+                    <i class="fa-solid fa-microchip text-4xl text-indigo-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">AI Research</h3>
+                    <p class="text-white/80 text-sm">
+                        Exploring deep learning and intelligent systems for real-world applications.
+                    </p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 text-center hover:scale-105 transition"
+                    data-slide="right">
+                    <i class="fa-solid fa-rocket text-4xl text-pink-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Innovation</h3>
+                    <p class="text-white/80 text-sm">
+                        Applying creative thinking to build impactful and scalable solutions.
+                    </p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 text-center hover:scale-105 transition"
+                    data-slide="left">
+                    <i class="fa-solid fa-book text-4xl text-blue-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Continuous Learning</h3>
+                    <p class="text-white/80 text-sm">
+                        Constantly improving skills through research, projects, and experimentation.
+                    </p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 text-center hover:scale-105 transition"
                     data-slide="right">
                     <i class="fa-solid fa-gamepad text-4xl text-red-400 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-white mb-2">Gaming & Strategy</h3>
-                    <p class="text-white/80 text-sm">Enjoying strategic games that challenge problem-solving skills.</p>
+                    <h3 class="text-xl font-semibold mb-2">Gaming & Strategy</h3>
+                    <p class="text-white/80 text-sm">
+                        Enjoying strategic games that enhance problem-solving and thinking ability.
+                    </p>
                 </div>
+
             </div>
         </div>
     </section>
+
 
     <!-- CV SECTION -->
     <section id="cv" class="min-h-screen bg-gray-950 px-4 md:px-6 py-24">
         <div class="max-w-6xl mx-auto opacity-0 translate-y-12 transition-all duration-1000 ease-out" data-reveal>
+
             <div class="text-center mb-6">
                 <h2 class="text-3xl md:text-5xl font-bold text-indigo-400 mb-2">Curriculum Vitae</h2>
-                <p class="text-gray-400 text-sm md:text-base">Scroll to view my complete CV</p>
+                <p class="text-gray-400 text-sm md:text-base">View or download my CV</p>
             </div>
+
             <div
-                class="w-full h-[65vh] max-sm:h-[70vh] md:h-[80vh] lg:h-[90vh] rounded-2xl overflow-hidden border border-white/20 shadow-2xl bg-black">
-                <iframe src="assets/Shanto_CV.pdf" class="w-full h-full" loading="lazy"></iframe>
+                class="w-full h-[65vh] md:h-[80vh] lg:h-[90vh] rounded-2xl overflow-hidden border border-white/20 shadow-2xl bg-black">
+
+                <iframe src="assets/Sayan_CV.pdf" class="w-full h-full" loading="lazy"></iframe>
+
             </div>
-            <p class="text-center text-gray-400 text-sm mt-3 md:hidden">
-                If CV does not display properly, please
-                <a href="assets/Shanto_CV.pdf" target="_blank" class="text-indigo-400 underline">download the PDF</a>.
-            </p>
+
             <div class="flex justify-center gap-4 mt-6">
-                <a href="assets/Shanto_CV.pdf" target="_blank" download
-                    class="px-8 py-3 rounded-full border border-white hover:bg-white hover:text-black transition transform hover:-translate-y-1 hover:scale-105 font-semibold">📄
-                    Download
-                    CV</a>
+                <a href="assets/Sayan_CV.pdf" target="_blank" download
+                    class="px-8 py-3 rounded-full border border-white hover:bg-white hover:text-black transition transform hover:-translate-y-1 hover:scale-105 font-semibold">
+                    📄 Download CV
+                </a>
+
                 <a href="#home"
-                    class="px-8 py-3 rounded-full bg-indigo-600 hover:bg-indigo-700 transition transform hover:-translate-y-1 hover:scale-105 font-semibold">Back
-                    to Top</a>
+                    class="px-8 py-3 rounded-full bg-indigo-600 hover:bg-indigo-700 transition transform hover:-translate-y-1 hover:scale-105 font-semibold">
+                    Back to Top
+                </a>
             </div>
+
         </div>
     </section>
-
-    <!-- CTA + CONTACT (LEFT / RIGHT with Divider + Magnetic Buttons) -->
+    <!-- CTA + CONTACT -->
     <section id="contact" class="py-24 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 px-6">
         <div class="max-w-6xl mx-auto opacity-0 translate-y-12 transition-all duration-1000 ease-out" data-reveal>
+
             <div class="relative grid md:grid-cols-[1fr_auto_1fr] gap-16 items-center">
+
+                <!-- LEFT SIDE -->
                 <div class="text-center md:text-left">
                     <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-4">
-                        Have a <span class="text-yellow-300">PROJECT</span> in mind?
+                        Let's Build Something <span class="text-yellow-300">Amazing</span>
                     </h2>
+
                     <p class="text-lg md:text-xl text-white/90 mb-10">
-                        I’m always open for projects or collaboration. Let’s connect and build something amazing!
+                        I’m open to AI/ML projects, research collaborations, and software development opportunities.
+                        Let’s connect and create impactful solutions!
                     </p>
+
                     <div class="flex flex-col sm:flex-row gap-6 justify-center md:justify-start">
-                        <a href="mailto:roycse17@gmail.com"
+
+                        <a href="mailto:roysayankomar@gmail.com"
                             class="magnetic px-10 py-4 rounded-full bg-black text-white font-semibold hover:bg-gray-900 transition transform hover:-translate-y-1 hover:scale-105">
                             📧 Email Me
                         </a>
-                        <a href="https://wa.me/8801627167955" target="_blank"
+
+                        <a href="https://wa.me/8801643191372" target="_blank"
                             class="magnetic px-10 py-4 rounded-full bg-green-500 text-black font-semibold hover:bg-green-600 transition transform hover:-translate-y-1 hover:scale-105">
                             💬 WhatsApp
                         </a>
+
                     </div>
                 </div>
+
+                <!-- DIVIDER -->
                 <div class="hidden md:flex justify-center relative">
-                    <div id="gradient-divider"
+                    <div
                         class="w-px h-60 rounded-full bg-gradient-to-b from-indigo-400 via-pink-400 to-purple-400 opacity-70">
                     </div>
-                    <div id="divider-glow"
-                        class="absolute w-24 h-24 rounded-full blur-3xl opacity-60 pointer-events-none"
-                        style="background: radial-gradient(circle, rgba(255,255,255,0.5), transparent 60%);">
-                    </div>
                 </div>
+
+                <!-- RIGHT SIDE -->
                 <div class="text-center">
                     <h3 class="text-3xl font-bold text-white mb-4">
                         Contact
                     </h3>
 
                     <p class="mb-6 text-white/70">
-                        🌍 Available worldwide for remote projects
+                        🌍 Available for remote opportunities worldwide
                     </p>
 
-
                     <div class="flex flex-wrap justify-center gap-6">
-                        <a href="mailto:roycse17@gmail.com"
+
+                        <a href="mailto:roysayankomar@gmail.com"
                             class="magnetic w-14 h-14 flex items-center justify-center rounded-full border border-white/40 hover:bg-gray-900 transition transform hover:-translate-y-1"
                             title="Email">
                             <i class="fa-solid fa-envelope text-xl"></i>
                         </a>
-                        <a href="https://wa.me/8801627167955" target="_blank"
+
+                        <a href="https://wa.me/8801643191372" target="_blank"
                             class="magnetic w-14 h-14 flex items-center justify-center rounded-full border border-white/40 hover:bg-green-600 transition transform hover:-translate-y-1"
                             title="WhatsApp">
                             <i class="fa-brands fa-whatsapp text-xl"></i>
                         </a>
 
-                        <a href="https://www.linkedin.com/in/shanto-roy-809511190/" target="_blank"
+                        <a href="https://www.linkedin.com/in/sayan-roy" target="_blank"
                             class="magnetic w-14 h-14 flex items-center justify-center rounded-full border border-white/40 hover:bg-white hover:text-black transition transform hover:-translate-y-1"
                             title="LinkedIn">
                             <i class="fa-brands fa-linkedin-in text-xl"></i>
                         </a>
-                        <a href="https://github.com/RoyShanto/" target="_blank"
+
+                        <a href="https://github.com/sayan-1-roy" target="_blank"
                             class="magnetic w-14 h-14 flex items-center justify-center rounded-full border border-white/40 hover:bg-white hover:text-black transition transform hover:-translate-y-1"
                             title="GitHub">
                             <i class="fa-brands fa-github text-xl"></i>
                         </a>
-                        <a href="https://www.facebook.com/krishAAnroy" target="_blank"
-                            class="magnetic w-14 h-14 flex items-center justify-center rounded-full border border-white/40 hover:bg-blue-600 hover:text-white transition transform hover:-translate-y-1"
-                            title="Facebook">
-                            <i class="fa-brands fa-facebook-f text-xl"></i>
-                        </a>
+
                     </div>
                 </div>
 
             </div>
+
         </div>
     </section>
 
     <!-- FOOTER SECTION -->
     <section class="pb-60">
+
+        <!-- Gradient Line -->
         <div class="h-1 w-full bg-gradient-to-r from-indigo-400 via-pink-400 to-purple-400 mt-3"></div>
+
+        <!-- Footer -->
         <footer class="py-6 text-center text-gray-400 bg-black">
-            © 2026 <span class="text-indigo-400 font-semibold">Shanto Roy</span>. All rights reserved.
+
+            <p class="mb-2">
+                © 2026 <span class="text-indigo-400 font-semibold">Sayan Kumar Roy</span>. All rights reserved.
+            </p>
+
+            <p class="text-sm text-gray-500">
+                Built with passion for AI, Machine Learning & Software Development 🚀
+            </p>
+
         </footer>
+
     </section>
 
     <!-- BACK TO TOP BUTTON (FLOATING) -->
@@ -658,10 +613,13 @@
         magneticButtons.forEach(button => {
             let mouseX = 0, mouseY = 0;
             let btnX = 0, btnY = 0;
+            let isHovered = false;
             const strength = 25; // max pixels the button moves
             const ease = 0.25; // lower = smoother/slower
 
-            const rect = button.getBoundingClientRect();
+            button.addEventListener('mouseenter', () => {
+                isHovered = true;
+            });
 
             button.addEventListener('mousemove', (e) => {
                 const rect = button.getBoundingClientRect();
@@ -670,6 +628,7 @@
             });
 
             button.addEventListener('mouseleave', () => {
+                isHovered = false;
                 mouseX = 0;
                 mouseY = 0;
             });
@@ -677,7 +636,8 @@
             function animate() {
                 btnX += (mouseX - btnX) * ease;
                 btnY += (mouseY - btnY) * ease;
-                button.style.transform = `translate(${btnX}px, ${btnY}px) scale(1.05)`;
+                const scale = isHovered ? 1.05 : 1;
+                button.style.transform = `translate(${btnX}px, ${btnY}px) scale(${scale})`;
                 requestAnimationFrame(animate);
             }
             animate();
